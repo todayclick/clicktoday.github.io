@@ -195,12 +195,12 @@
     playButton.disabled = true;
     playButton.hidden = true;
     if (!CONTENT_VIDEO_URL) {
-      status.textContent = `${message} CONTENT_VIDEO_URL muss noch gesetzt werden.`;
+      status.textContent = `${message} CONTENT_VIDEO_URL still has to be set.`;
       return;
     }
     status.textContent = message;
     video.play().catch(() => {
-      status.textContent = "Zum Abspielen bitte erneut auf Play drücken.";
+      status.textContent = "To show press the play button.";
       video.controls = true;
     });
   }
@@ -238,13 +238,13 @@
     }
     frame.classList.remove("is-ad-active");
     if (adStarted) {
-      startContentWithoutAd("Die Anzeige konnte nicht geladen werden. Video läuft ohne Anzeige.");
+      startContentWithoutAd("Ad couldn't load. Video shows without ad.");
     } else {
       playButton.disabled = false;
-      playButton.textContent = "Video ohne Anzeige starten";
+      playButton.textContent = "Video starting without ad";
       const statusMessage = errorCode === null
-        ? "Die Anzeige konnte nicht geladen werden."
-        : `Anzeige konnte nicht geladen werden (IMA ${errorCode}${vastErrorCode === null ? "" : ` / VAST ${vastErrorCode}`}).`;
+        ? "Ad couldn't load."
+        : `Ad couldn't load. (IMA ${errorCode}${vastErrorCode === null ? "" : ` / VAST ${vastErrorCode}`}).`;
       const diagnosticDetails = [
         errorType,
         errorMessage,
