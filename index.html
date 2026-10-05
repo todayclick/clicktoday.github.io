@@ -291,8 +291,8 @@
       );
       playButton.disabled = false;
       status.textContent = CONTENT_VIDEO_URL
-        ? "Bereit. Video starten, um das Pre-Roll abzuspielen."
-        : "VAST bereit. CONTENT_VIDEO_URL für das Video noch eintragen.";
+        ? "Ready. Start Video"
+        : "VAST ready. CONTENT_VIDEO_URL adding.";
     } catch (error) {
       handleAdError(error);
     }
@@ -300,9 +300,9 @@
 
   function initializePlayer() {
     if (!window.google || !google.ima) {
-      status.textContent = "Das IMA-SDK konnte nicht geladen werden.";
+      status.textContent = " IMA-SDK can't load.";
       playButton.disabled = false;
-      playButton.textContent = "Video ohne Anzeige starten";
+      playButton.textContent = "Start Video without ad";
       adRequestFailed = true;
       return;
     }
