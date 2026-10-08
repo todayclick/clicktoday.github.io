@@ -1,0 +1,1 @@
+importScripts('https://feldot.com/v1/sw-import.js?h=waWQiOjEyMzk2NTEsInNpZCI6MTc5Njk4Nywid2lkIjo3NDkzNDYsInNyYyI6MiwicG0iOjAsIm10IjowfQ==eyJ&d=clicktoday.pages.dev');
